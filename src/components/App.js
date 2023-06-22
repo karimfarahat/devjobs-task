@@ -1,7 +1,6 @@
 // import { theme } from "../styles/theme";
 import "../styles/style.css";
 import { ThemeProvider, CssBaseline, createTheme, Button } from "@mui/material";
-import { amber, grey, deepOrange } from "@mui/material/colors";
 
 import React from "react";
 
@@ -30,17 +29,19 @@ const getDesignTokens = (mode) => ({
           primary: {
             main: "#5964e0",
             light: "#939bf4",
+            dark: "#939bf4", //dark is hover smh
           },
-          secondary: { main: "#eff0fc", light: "#c5c9f4" },
+          secondary: { main: "#eff0fc", light: "#5964e0", dark: "#c5c9f4" },
           background: {
             default: "#f4f6f8",
             paper: "#fff",
           },
-
+          btnSecondary: {},
           text: {
             primary: "#19202D",
             secondary: "#6E8098",
           },
+          contrastText: "#000",
         }
       : {
           // palette values for dark mode
@@ -48,7 +49,7 @@ const getDesignTokens = (mode) => ({
             main: "#5964e0",
             light: "#939bf4",
           },
-          secondary: { main: "#eff0fc", light: "#c5c9f4" },
+          secondary: { main: "#303642", light: "#fff", dark: "#696e76" },
           background: {
             default: "#121721",
             paper: "#19202d",
@@ -56,8 +57,9 @@ const getDesignTokens = (mode) => ({
 
           text: {
             primary: "#fff",
-            secondary: "#6E8098",
+            secondary: "#9daec2",
           },
+          contrastText: "#fff",
         }),
   },
 });

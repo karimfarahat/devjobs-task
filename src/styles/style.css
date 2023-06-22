@@ -16,3 +16,28 @@
   width: 50px;
   height: 50px;
 }
+
+ul {
+  padding: 0 0 0 20px;
+}
+li {
+  padding: 3px 0px;
+}
+
+li::marker {
+  color: #5964e0;
+}
+
+.number-list {
+  padding: 0 0 0 20px;
+  counter-reset: my-awesome-counter;
+  /* list-style-type: none; */
+}
+.number-list li {
+  counter-increment: my-awesome-counter;
+}
+.number-list li::marker {
+  font-weight: bold;
+  /* to make the styled list i like, i add space before li content*/
+  content: counter(my-awesome-counter) "   ";
+}
